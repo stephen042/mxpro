@@ -10,28 +10,28 @@
             <table class="w-full text-sm text-left text-gray-300">
                 <thead class="text-gray-900 dark:text-gray-100">
                     <tr class="text-sm font-semibold">
-                        <th class="px-6 py-4">S/N</th>
-                        <th class="px-6 py-4">Date</th>
-                        <th class="px-6 py-4">Amount ($)</th>
-                        <th class="px-6 py-4">Wallet Address</th>
-                        <th class="px-6 py-4">Crypto Currency</th>
-                        <th class="px-6 py-4">Status</th>
-                        <th class="px-6 py-4">Action</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">S/N</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Date</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Amount ($)</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Wallet Address</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Crypto Currency</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Status</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($withdraws as $index => $withdraw)
                     <tr class="border-b border-gray-700 hover:bg-gray-800 transition">
-                        <td class="px-6 py-4">{{ $index + 1 }}</td>
-                        <td class="px-6 py-4">{{ $withdraw->created_at->format('d M, Y') }}</td>
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $index + 1 }}</td>
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $withdraw->created_at->format('d M, Y') }}</td>
                         <td class="px-6 py-4 font-medium text-gray-100">
                             {{ number_format($withdraw->amount, 2) }}
                         </td>
                         <td class="px-6 py-4 font-medium text-gray-100">
                             {{ $withdraw->wallet_address }}
                         </td>
-                        <td class="px-6 py-4">{{ $withdraw->crypto_currency }}</td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $withdraw->crypto_currency }}</td>
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full
                                     @if($withdraw->status == 3) bg-green-600 text-green-600 
                                     @elseif($withdraw->status == 1) bg-yellow-500 text-yellow-500
@@ -45,7 +45,7 @@
                                 @endif
                             </span>
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <div class="flex space-x-2">
                                 <!-- Delete Button -->
                                 <button wire:click="deleteWithdraw({{ $withdraw->id }})"
