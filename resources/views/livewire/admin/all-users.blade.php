@@ -7,15 +7,15 @@
     <!-- Table -->
     <div class="overflow-x-auto">
         <table class="w-full text-sm text-left text-gray-200 dark:text-gray-300 bg-white dark:bg-gray-800">
-            <thead class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+            <thead class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200">
                 <tr class="text-sm font-semibold">
-                    <th class="px-6 py-4">S/N</th>
-                    <th class="px-6 py-4">Name</th>
-                    <th class="px-6 py-4">Reg Date</th>
-                    <th class="px-6 py-4">Country</th>
-                    <th class="px-6 py-4">Balance</th>
-                    <th class="px-6 py-4">Sub Balance</th>
-                    <th class="px-6 py-4">Action</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">S/N</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Name</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Reg Date</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Country</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Balance</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Sub Balance</th>
+                    <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Action</th>
                 </tr>
             </thead>
             <tbody>
