@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
     <!-- Balance Card -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4 max-w-sm mx-auto">
         <!-- Credit User Balance -->
         <form wire:submit.prevent="credit_balance">
             <div class="mb-6">
@@ -11,7 +11,7 @@
                     <input type="number" wire:model.live="credit_bal_amount" placeholder="Credit User Balance"
                         class="flex-1 px-1 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200">
                     <button type="submit"
-                        class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-r-md">
+                        class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-r-md focus:ring focus:ring-green-300">
                         Credit
                     </button>
                 </div>
@@ -30,7 +30,7 @@
                     <input type="number" wire:model.live="debit_bal_amount" placeholder="Debit User Balance"
                         class="flex-1 px-1 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:text-gray-200">
                     <button type="submit"
-                        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-r-md">
+                        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-r-md focus:ring focus:ring-red-300">
                         Debit
                     </button>
                 </div>
@@ -42,7 +42,7 @@
     </div>
 
     <!-- Sub Balance Card -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4 max-w-sm mx-auto">
         <!-- Credit User Sub Balance -->
         <form wire:submit.prevent="credit_sub_balance">
             <div class="mb-6">
@@ -53,7 +53,7 @@
                     <input type="number" wire:model.live="credit_sub_bal_amount" placeholder="Credit User Sub Funds"
                         class="flex-1 px-1 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:text-gray-200">
                     <button type="submit"
-                        class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-r-md">
+                        class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-r-md focus:ring focus:ring-green-300">
                         Credit
                     </button>
                 </div>
@@ -72,7 +72,7 @@
                     <input type="number" wire:model.live="debit_sub_bal_amount" placeholder="Debit User Sub Funds"
                         class="flex-1 px-1 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:text-gray-200">
                     <button type="submit"
-                        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-r-md">
+                        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-r-md focus:ring focus:ring-red-300">
                         Debit
                     </button>
                 </div>
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Account Status & Email Card -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-4 max-w-sm mx-auto">
         <!-- Email User -->
         <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
