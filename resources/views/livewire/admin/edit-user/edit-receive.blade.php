@@ -8,7 +8,7 @@
         <!-- Table -->
         <div class="overflow-x-auto">
             <table class="w-full text-sm text-left text-gray-300">
-                <thead class="bg-gray-800 text-gray-400">
+                <thead class=" text-gray-900 dark:text-gray-100">
                     <tr class="text-sm font-semibold">
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">S/N</th>
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Date</th>
