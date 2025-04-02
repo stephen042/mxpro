@@ -23,18 +23,19 @@
                     @foreach ($deposits as $index => $deposit)
                     <tr class="border-b border-gray-700 hover:bg-gray-800 transition">
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $index + 1 }}</td>
-                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $deposit->created_at->format('d M, Y') }}</td>
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $deposit->created_at->format('d M, Y')
+                            }}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">
                             {{ number_format($deposit->amount, 2) }}
                         </td>
-                        <td class="px-6 py-4 font-medium text-gray-100">
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">
                             @if ($deposit->receiving_for == 1)
                             {{ "Net Balance" }}
                             @elseif ($deposit->receiving_for == 2)
                             {{ "Subscription Balance" }}
                             @endif
                         </td>
-                        
+
                         <td class="px-6 py-2 text-gray-900 dark:text-gray-100">
                             @if ($deposit->proof)
                             <a href="{{ asset('storage/' . $deposit->proof) }}" target="_blank">
@@ -47,9 +48,9 @@
                         </td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full
-                                    @if($deposit->status == 3) bg-green-600 text-white 
-                                    @elseif($deposit->status == 1) bg-yellow-500 text-black 
-                                    @else bg-red-600 text-white @endif">
+                                    @if($deposit->status == 3) bg-green-600 text-green-600 
+                                    @elseif($deposit->status == 1) bg-yellow-500 text-yellow-500
+                                    @else bg-red-600 text-red-600 @endif">
                                 @if ($deposit->status == 3)
                                 {{ "Completed" }}
                                 @elseif ($deposit->status == 1)
@@ -59,6 +60,7 @@
                                 @endif
                             </span>
                         </td>
+
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <div class="flex space-x-2">
                                 <!-- Delete Button -->
