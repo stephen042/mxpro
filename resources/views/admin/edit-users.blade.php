@@ -66,6 +66,8 @@
 
         <livewire:admin.edit-user.edit-progress-bar :user="$user" />
 
+        <livewire:admin.edit-user.edit-signal-strength :user="$user" />
+
         <livewire:admin.edit-user.edit-receive :user="$user" />
 
         <livewire:admin.edit-user.edit-send :user="$user" />

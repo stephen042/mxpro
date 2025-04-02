@@ -17,8 +17,8 @@ class EditProgressBar extends Component
         $this->user->progress_bar_status = $this->progress_bar_status;
         $this->user->save();
 
-        $this->dispatch('notify', 'User progress bar has been updated', 'success');
-        return redirect()->route('admin.user.edit', $this->user->id);
+        $this->dispatch('notify', 'User Trade progress bar has been updated', 'success');
+        // return redirect()->route('admin.user.edit', $this->user->id);
     }
     public function render()
     {
