@@ -6,8 +6,8 @@
 
     <!-- Table -->
     <div class="overflow-x-auto">
-        <table class="w-full text-sm text-left text-gray-200 dark:text-gray-300">
-            <thead class="bg-gray-800 dark:bg-gray-800 text-gray-200">
+        <table class="w-full text-sm text-left text-gray-200 dark:text-gray-300 bg-white dark:bg-gray-800">
+            <thead class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
                 <tr class="text-sm font-semibold">
                     <th class="px-6 py-4">S/N</th>
                     <th class="px-6 py-4">Name</th>
@@ -20,19 +20,19 @@
             </thead>
             <tbody>
                 @foreach ($users as $index => $user)
-                <tr class="border-b border-gray-700 dark:border-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 transition duration-200">
+                <tr class="border-b border-gray-700 dark:border-gray-700">
                     <td class="px-6 py-4">{{ $index + 1 }}</td>
                     <td class="px-6 py-4 flex items-center space-x-2.5">
                         <img class="w-10 h-10 rounded-full object-contain" src="{{ asset('assets/logo.png') }}" alt="Profile Picture">
                         <div class="flex flex-col">
-                            <span class="font-medium text-gray-200 dark:text-gray-100">{{ $user->name }}</span>
-                            <span class="font-medium text-gray-400 dark:text-gray-500">{{ $user->email }}</span>
+                            <span class="font-medium text-gray-900 dark:text-gray-100">{{ $user->name }}</span>
+                            <span class="font-medium text-gray-600 dark:text-gray-400">{{ $user->email }}</span>
                         </div>
                     </td>
                     <td class="px-6 py-4">{{ $user->created_at->format('d M, Y') }}</td>
-                    <td class="px-6 py-4 font-medium text-gray-300 dark:text-gray-100">{{ $user->country }}</td>
-                    <td class="px-6 py-4 font-medium text-gray-300 dark:text-gray-100">${{ number_format($user->balance, 2) }}</td>
-                    <td class="px-6 py-4 font-medium text-gray-300 dark:text-gray-100">${{ number_format($user->sub_balance, 2) }}</td>
+                    <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-100">{{ $user->country }}</td>
+                    <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-100">${{ number_format($user->balance, 2) }}</td>
+                    <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-100">${{ number_format($user->sub_balance, 2) }}</td>
                     <td class="px-6 py-4">
                         <div class="flex space-x-2">
                             <a href="{{ route('admin.user.edit', $user->id) }}" class="flex items-center space-x-1 px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded hover:bg-blue-700 transition">

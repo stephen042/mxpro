@@ -1,10 +1,9 @@
 <x-layouts.admin :title="__('Dashboard')">
     <div class="container mx-auto space-y-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between gap-6">
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6">
                 <!-- All Customers Card -->
-                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center">
+                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
                         stroke="currentColor" class="w-10 h-10 text-green-500 dark:text-green-300">
                         <path stroke-linecap="round" stroke-linejoin="round" 
@@ -14,8 +13,8 @@
                     <p class="mt-2 text-2xl font-bold text-gray-900 dark:text-gray-200">{{ $total_users }}</p>
                 </div>
 
-                <!-- Total Balance Card (unchanged) -->
-                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center">
+                <!-- Total Balance Card -->
+                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-10 h-10 text-blue-500 dark:text-blue-300">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -28,7 +27,7 @@
                 </div>
 
                 <!-- Subscription Balance Card -->
-                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center">
+                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
                         stroke="currentColor" class="w-10 h-10 text-yellow-500 dark:text-yellow-300">
                         <path stroke-linecap="round" stroke-linejoin="round" 
@@ -41,7 +40,7 @@
                 </div>
 
                 <!-- Total Withdrawn Card -->
-                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center">
+                <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-5 flex flex-col items-center justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
                         stroke="currentColor" class="w-10 h-10 text-red-500 dark:text-red-300">
                         <path stroke-linecap="round" stroke-linejoin="round" 
@@ -52,7 +51,6 @@
                         ${{ number_format($total_withdraw, 2) }}
                     </p>
                 </div>
-
             </div>
         </div>
 
