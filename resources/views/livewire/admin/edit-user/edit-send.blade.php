@@ -24,10 +24,10 @@
                     <tr class="border-b border-gray-700 hover:bg-gray-800 transition">
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $index + 1 }}</td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $withdraw->created_at->format('d M, Y') }}</td>
-                        <td class="px-6 py-4 font-medium text-gray-100">
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">
                             {{ number_format($withdraw->amount, 2) }}
                         </td>
-                        <td class="px-6 py-4 font-medium text-gray-100">
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">
                             {{ $withdraw->wallet_address }}
                         </td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $withdraw->crypto_currency }}</td>
