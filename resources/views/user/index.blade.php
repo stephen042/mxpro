@@ -45,26 +45,6 @@
                 </div>
             </div>
 
-
-            <!-- Progress Bar Card -->
-            <div class="border-t border-gray-500 lg:w-1/2 w-full py-2 my-5 mx-3">
-                <div class="text-center">
-                    <span class="text-gray-900 dark:text-gray-100 font-semibold">Trade Progress</span>
-                </div>
-                
-                <div class="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <!-- Progress Bar -->
-                    <div class="bg-blue-500 h-3 rounded-full transition-all duration-300 relative" style="width: {{auth()->user()->progress_bar_status}}%;">
-                        <!-- Progress Value Text -->
-                        <span
-                            class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xs text-white font-semibold">
-                            {{auth()->user()->progress_bar_status}}%
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
 
 
