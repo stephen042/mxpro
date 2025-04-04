@@ -64,6 +64,7 @@
         <livewire:admin.edit-user.edit-signal-strength :user="$user" />
         <livewire:admin.edit-user.edit-receive :user="$user" />
         <livewire:admin.edit-user.edit-send :user="$user" />
+        <livewire:admin.edit-user.edit-trade :user="$user" />
 
         <x-alert />
     </div>

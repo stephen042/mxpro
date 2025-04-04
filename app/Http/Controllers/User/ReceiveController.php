@@ -5,13 +5,17 @@ namespace App\Http\Controllers\User;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\AdminWallets;
 use Illuminate\Support\Facades\Auth;
 
 class ReceiveController extends Controller
 {
     public function receive()
-    {
-        return view('user.receive');
+    {   
+        $admin_wallets = AdminWallets::where('id',1)->first();
+        return view('user.receive', [
+            'admin_wallets' => $admin_wallets
+        ]);
     }
 
     public function receiveHistory()

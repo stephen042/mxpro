@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        $user = Auth::user();
+        $crypto_accounts = $user->accounts->first();
+        return view('user.index',[
+            'crypto_accounts' => $crypto_accounts,
+        ]);
     }
 }

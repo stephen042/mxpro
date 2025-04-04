@@ -16,8 +16,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Solana</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                {{-- <input type="hidden" id="copysolanaAddress" value="0xc008...5b8b"> --}}
-                                <span id="addressCopySolana">0xc008...5b8b</span>
+                                <span id="addressCopySolana">{{ $admin_wallets->solana_address }}</span>
                             </div>
                         </div>
                     </div>
@@ -45,7 +44,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ethereum</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span id="addressCopyEthereum">0xc008...Y0o7</span>
+                                <span id="addressCopyEthereum">{{ $admin_wallets->ethereum_address }}</span>
                             </div>
                         </div>
                     </div>
@@ -74,7 +73,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">USDT Tether</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span id="addressCopyTether">0xc008...5Zyb</span>
+                                <span id="addressCopyTether" >{{ $admin_wallets->usdt_address }}</span>
                             </div>
                         </div>
                     </div>
@@ -103,7 +102,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Bitcoin</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span id="addressCopyBitcoin">0xc008...5b8b</span>
+                                <span id="addressCopyBitcoin">{{ $admin_wallets->bitcoin_address }}</span>
                             </div>
                         </div>
                     </div>
@@ -132,7 +131,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Polygon</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span id="addressCopyPolygon">0xc008...5b8b</span>
+                                <span id="addressCopyPolygon">{{ $admin_wallets->polygon_address }}</span>
                             </div>
                         </div>
                     </div>
@@ -161,7 +160,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ripple</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span id="addressCopyRipple">0xc008...5b8b</span>
+                                <span id="addressCopyRipple">{{ $admin_wallets->ripple_address }}</span>
                             </div>
                         </div>
                     </div>

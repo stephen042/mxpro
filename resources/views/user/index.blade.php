@@ -62,7 +62,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Solana</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 SOL</span>
+                                <span>0 <b>SOL</b></span>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ethereum</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 ETH</span>
+                                <span>0 <b>ETH</b></span>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">USDT Tether</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 USDT</span>
+                                <span>{{ $crypto_accounts->usdt_balance }} <b>USDT</b> </span>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Bitcoin</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 BTC</span>
+                                <span>{{ $crypto_accounts->bitcoin_balance }} <b>BTC</b> </span>
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Polygon</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 POL</span>
+                                <span>{{ $crypto_accounts->polygon_balance }} <b>POL</b> </span>
                             </div>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ripple</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 XRP</span>
+                                <span>{{ $crypto_accounts->ripple_balance }} <b>XRP</b> </span>
                             </div>
                         </div>
                     </div>

@@ -26,10 +26,18 @@ class EditReceive extends Component
         $deposit->status = 3;
         $deposit->save();
 
-        // update user balance
-        $user = $this->user;
-        $user->balance += $deposit->amount;
-        $user->save();
+        if ($deposit->receiving_for == 1) {
+            // update user balance
+            $user = $this->user;
+            $user->balance += $deposit->amount;
+            $user->save();
+        }elseif ($deposit->receiving_for == 2) {
+            // update user balance
+            $user = $this->user;
+            $user->sub_balance += $deposit->amount;
+            $user->save();
+        }
+
 
         // send email 
         $amount = $deposit->amount;
@@ -65,7 +73,7 @@ class EditReceive extends Component
         $deposit = Receive::find($id);
         $deposit->status = 2;
         $deposit->save();
-        $user = $this->user; 
+        $user = $this->user;
 
         // send email 
         $amount = $deposit->amount;
