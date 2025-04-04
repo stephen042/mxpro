@@ -12,6 +12,7 @@
                     <tr class="text-sm font-semibold">
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">S/N</th>
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Date</th>
+                        <th class="px-6 py-4 text-gray-900 dark:text-gray-100">But / Sell</th>
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Trade Type</th>
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Trade Asset</th>
                         <th class="px-6 py-4 text-gray-900 dark:text-gray-100">Stake Amount ($)</th>
@@ -27,6 +28,13 @@
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $index + 1 }}</td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $trade->created_at->format('d M, Y')
                             }}</td>
+                        <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
+                            @if ($trade->buy_sell == 2)
+                            {{ "Sell" }}
+                            @elseif ($trade->buy_sell == 1)
+                            {{ "Buy" }}
+                            @endif
+                        </td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $trade->trade_type}}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">{{ $trade->trade_asset }}
                         </td>
@@ -35,12 +43,12 @@
                         </td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full
-                                    @if($trade->status == 3) bg-green-600 text-green-600 
-                                    @elseif($trade->status == 1) bg-yellow-500 text-yellow-500
+                                    @if($trade->trade_status == 3) bg-green-600 text-green-600 
+                                    @elseif($trade->trade_status == 1) bg-yellow-500 text-yellow-500
                                     @else bg-red-600 text-red-600 @endif">
-                                @if ($trade->status == 3)
+                                @if ($trade->trade_status == 3)
                                 {{ "Completed" }}
-                                @elseif ($trade->status == 1)
+                                @elseif ($trade->trade_status == 1)
                                 {{ "Ongoing" }}
                                 @else
                                 {{ "Denied" }}
