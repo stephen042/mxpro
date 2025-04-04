@@ -2,7 +2,7 @@
     <div class="bg-gray-900 shadow-lg rounded-xl overflow-hidden">
         <!-- Header -->
         <div class="p-6 border-b border-gray-700 flex items-center justify-between">
-            <h2 class="text-xl font-semibold text-gray-200">Send History (Withdraw)</h2>
+            <h2 class="text-xl font-semibold text-gray-200">Trade History</h2>
         </div>
 
         <!-- Table -->
