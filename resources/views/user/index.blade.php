@@ -69,7 +69,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->solana_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span>+0.00</span> --}}
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ethereum_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span>+0.00</span> --}}
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->usdt_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span></span> --}}
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->bitcoin_balance, 2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span>+0.00</span> --}}
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->polygon_balance, 2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span>+0.00</span> --}}
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                     <div class="flex flex-col">
                         <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ripple_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+0.00</span>
+                            {{-- <span>+0.00</span> --}}
                         </div>
                     </div>
                 </div>
