@@ -62,14 +62,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Solana</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 <b>SOL</b></span>
+                                <span><b>SOL</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->solana_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
@@ -84,14 +84,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ethereum</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>0 <b>ETH</b></span>
+                                <span><b>ETH</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ethereum_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
@@ -106,14 +106,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">USDT Tether</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>{{ $crypto_accounts->usdt_balance }} <b>USDT</b> </span>
+                                <span><b>USDT</b> </span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->usdt_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
@@ -128,14 +128,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Bitcoin</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>{{ $crypto_accounts->bitcoin_balance }} <b>BTC</b> </span>
+                                <span><b>BTC</b> </span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->bitcoin_balance, 2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
@@ -150,14 +150,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Polygon</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>{{ $crypto_accounts->polygon_balance }} <b>POL</b> </span>
+                                <span><b>POL</b> </span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->polygon_balance, 2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
@@ -172,14 +172,14 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ripple</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span>{{ $crypto_accounts->ripple_balance }} <b>XRP</b> </span>
+                                <span><b>XRP</b> </span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">$0.00</span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ripple_balance,2) }} </span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
-                            <span>+$0.00</span>
+                            <span>+0.00</span>
                         </div>
                     </div>
                 </div>
