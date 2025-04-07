@@ -5236,25 +5236,13 @@
                     "_type": "navItem",
                     "icon": "shield",
                     "link": {
-                      "href": "/register",
-                      "hrefInternalAnchor": null,
-                      "download": null
-                    },
-                    "label": "Sign Up",
-                    "subitems": null,
-                    "_key": "95fff9ebd14b"
-                  },
-                  {
-                    "label": "Log In",
-                    "_key": "5df712b3fe04",
-                    "_type": "navItem",
-                    "icon": "globe",
-                    "subitems": null,
-                    "link": {
                       "href": "/login",
                       "hrefInternalAnchor": null,
                       "download": null
-                    }
+                    },
+                    "label": "Get Started",
+                    "subitems": null,
+                    "_key": "95fff9ebd14b"
                   }
                 ]
               },
