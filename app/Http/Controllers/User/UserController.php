@@ -11,7 +11,7 @@ class UserController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $crypto_accounts = $user->accounts->first();
+        $crypto_accounts = $user->accounts;
         return view('user.index',[
             'crypto_accounts' => $crypto_accounts,
         ]);
