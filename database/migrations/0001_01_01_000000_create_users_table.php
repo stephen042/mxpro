@@ -27,6 +27,8 @@ return new class extends Migration
             $table->integer('signal_strength')->default(0);
             $table->integer('account_hold')->default(1); //default 1
             $table->integer('role')->default(0); //default 0 
+            $table->string('user_trade_free_margin')->default(0); //default 0 
+            $table->string('user_trade_equity')->default(0); //default 0 
             $table->rememberToken();
             $table->timestamps();
         });

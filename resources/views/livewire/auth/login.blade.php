@@ -45,7 +45,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
         // Check if account is on hold
         if ($user->account_hold == 1) {
             throw ValidationException::withMessages([
-                'email' => 'Your account is on hold. Please contact support.',
+                'email' => 'Your account is been Processed and we will get back to you once your account is been verified.',
             ]);
         }
 
@@ -62,25 +62,25 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         
         // Send login notification
-        // $app = config('app.name');
-        // $date = date('Y-M-d H:i');
-        // $userEmail = $user->email;
+        $app = config('app.name');
+        $date = date('Y-M-d H:i');
+        $userEmail = $user->email;
 
-        // $full_name = $user->name;
-        // $subject = "Login Notification";
+        $full_name = $user->name;
+        $subject = "Login Notification";
 
-        // $bodyUser = [
-        //     "name" => $full_name,
-        //     "title" => "Login Notification",
-        //     "message" => "We noticed a login attempt on your $app account on $date. <br> Please contact us if you did not initiate this login or Change your password for safety ",
-        // ];
+        $bodyUser = [
+            "name" => $full_name,
+            "title" => "Login Notification",
+            "message" => "We noticed a login attempt on your $app account on $date. <br> Please contact us if you did not initiate this login or Change your password for safety ",
+        ];
 
-        // try {
-        //     // user email
-        //     Mail::to($userEmail)->send(new AppMail($subject, $bodyUser));
-        // } catch (\Throwable $th) {
-        //     //throw $th;
-        // }
+        try {
+            // user email
+            Mail::to($userEmail)->send(new AppMail($subject, $bodyUser));
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
 

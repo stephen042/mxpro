@@ -8,11 +8,21 @@ class AccountTopUp extends Component
 {
     public $user;
 
+    public $free_margin;
+    public $equity;
+
     public $credit_bal_amount;
     public $credit_sub_bal_amount;
     
     public $debit_bal_amount;
     public $debit_sub_bal_amount;
+
+    public function mount($user)
+    {
+        $this->user = $user;
+        $this->free_margin = $user->user_trade_free_margin;
+        $this->equity = $user->user_trade_equity;
+    }
 
     public function credit_balance(){
         $this->validate([
@@ -68,6 +78,27 @@ class AccountTopUp extends Component
 
         $this->dispatch('notify', 'User sub balance has been debited', 'success');
         return redirect()->route('admin.user.edit', $this->user->id);
+    }
+    public function update_free_margin(){
+        $this->validate([
+            'free_margin' => 'required',
+        ]);
+
+        $this->user->user_trade_free_margin = $this->free_margin;
+        $this->user->save();
+
+        return $this->dispatch('notify', 'User trade free margin have been updated', 'success');
+    }
+    
+    public function update_equity(){
+        $this->validate([
+            'equity' => 'required',
+        ]);
+
+        $this->user->user_trade_equity = $this->equity;
+        $this->user->save();
+
+        return $this->dispatch('notify', 'User trade Margin have been updated', 'success');
     }
 
     public function render()

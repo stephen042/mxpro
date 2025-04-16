@@ -1,5 +1,23 @@
 <x-layouts.app :title="__('Dashboard')">
     <div class="container">
+        <div class="space-y-0.5 text-xs">
+            <div class="flex justify-between items-center lg:w-1/2">
+                <span class="text-gray-900 dark:text-gray-100">Balance:</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->balance, 2) }}</span>
+            </div>
+        
+            <div class="flex justify-between items-center lg:w-1/2">
+                <span class="text-gray-900 dark:text-gray-100">Equity:</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">{{ auth()->user()->user_trade_equity}}</span>
+            </div>
+        
+            <div class="flex justify-between items-center lg:w-1/2">
+                <span class="text-gray-900 dark:text-gray-100">Free Margin:</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">{{auth()->user()->user_trade_free_margin}}</span>
+            </div>
+        </div>
+        
+
 
         <!-- Progress Bar Card -->
         <div class="border-t border-gray-500 lg:w-1/2 w-full max-w-md py-2 my-5 mx-3">
