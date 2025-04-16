@@ -44,8 +44,14 @@
                 {{ __('Done') }}
             </flux:button>
 
-            <x-alert />
-            
+            <x-action-message class="my-3" on="receive-submitted" type="success">
+                {{ __('Your Receive request is on progress.') }}
+            </x-action-message>
+
+            <x-action-message class="my-3" on="receive-error" type="error">
+                {{ __('Email was not sent:) an error occurred') }}
+            </x-action-message>
+
         </div>
     </form>
 </div>

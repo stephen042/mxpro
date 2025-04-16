@@ -75,9 +75,9 @@ class Receive extends Component
                 Mail::to(config('app.Admin_email'))->send(new AppMail($subject, $bodyAdmin));
     
                 // Dispatch an event that Livewire listens to
-                $this->dispatch('notify', 'Your Receive request is on progress', 'success');
+                $this->dispatch('receive-submitted');
             } catch (\Throwable $th) {
-                $this->dispatch('notify', 'Email sending failed. Try again.', 'error');
+                $this->dispatch('receive-error');
             }
     
             return $this->reset();
