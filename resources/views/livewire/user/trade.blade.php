@@ -83,6 +83,16 @@
                 {{ __('Sell') }}
             </flux:button>
         </div>
+        <x-action-message class="my-3" on="trade-submitted" type="success">
+            {{ __('Your Trade is on progress.') }}
+        </x-action-message>
+
+        <x-action-message class="my-3" on="trade-error" type="error">
+            {{ __('Email was not sent:) an error occurred') }}
+        </x-action-message>
+
+        <x-action-message class="my-3" on="trade_insufficient_balance" type="error">
+            {{ __('Insufficient funds to place this trade') }}
+        </x-action-message>
     </form>
-    <x-alert />
 </div>

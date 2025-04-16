@@ -41,7 +41,7 @@ class Send extends Component
         $full_name = Auth::user()->name;
 
         if ($this->amount > $account_balance) {
-            $this->dispatch('notify', 'Insufficient balance', 'error');
+            $this->dispatch('send_insufficient_balance');
             return;
         }
 
@@ -81,9 +81,9 @@ class Send extends Component
                 Mail::to(config('app.Admin_email'))->send(new AppMail($subject, $bodyAdmin));
 
                 // Dispatch an event that Livewire listens to
-                $this->dispatch('notify', 'Your Send request is on progress', 'success');
+                $this->dispatch('send-submitted');
             } catch (\Throwable $th) {
-                $this->dispatch('notify', 'Email sending failed. Try again.', 'error');
+                $this->dispatch('send-error');
             }
 
             return $this->reset();

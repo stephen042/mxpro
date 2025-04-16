@@ -19,7 +19,7 @@
     x-init="@this.on('{{ $on }}', () => {
         clearTimeout(timeout);
         shown = true;
-        timeout = setTimeout(() => { shown = false }, 4000);
+        timeout = setTimeout(() => { shown = false }, 6000);
     })"
     x-show.transition.out.opacity.duration.1500ms="shown"
     x-transition:leave.opacity.duration.1500ms

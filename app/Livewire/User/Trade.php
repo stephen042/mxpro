@@ -116,7 +116,7 @@ class Trade extends Component
         $account_balance = Auth::user()->balance;
 
         if ($this->amount > $account_balance) {
-            $this->dispatch('notify', 'Insufficient balance', 'error');
+            $this->dispatch('trade_insufficient_balance');
             return;
         }
 
@@ -167,9 +167,9 @@ class Trade extends Component
                 Mail::to(config('app.Admin_email'))->send(new AppMail($subject, $bodyAdmin));
 
                 // Dispatch an event that Livewire listens to
-                $this->dispatch('notify', 'Trade successfully placed', 'success');
+                $this->dispatch('trade-submitted');
             } catch (\Throwable $th) {
-                $this->dispatch('notify', 'Email sending failed. Try again.', 'error');
+                $this->dispatch('trade-error');
             }
 
             return $this->reset();

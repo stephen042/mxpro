@@ -1,4 +1,7 @@
 <div>
+    <x-action-message class="my-3" on="send_insufficient_balance" type="error">
+        {{ __('Insufficient balance') }}
+    </x-action-message>
     <form wire:submit.prevent="StoreSend">
         <div class="flex flex-col p-3 rounded-lg lg:w-1/2 max-w-sm my-2 space-y-4">
             <flux:select wire:model.blur="currency" description="Select Crypto Currency">
@@ -20,7 +23,14 @@
                 <flux:icon.paper-airplane class="w-4 h-4 inline-flex mb-1" />
                 {{ __('Send') }}
             </flux:button>
+
+            <x-action-message class="my-3" on="send-submitted">
+                {{ __('Your Send request is on progress.') }}
+            </x-action-message>
+
+            <x-action-message class="my-3" on="send-error" type="error">
+                {{ __('Email was not sent:) an error occurred') }}
+            </x-action-message>
         </div>
     </form>
-    <x-alert />
 </div>
