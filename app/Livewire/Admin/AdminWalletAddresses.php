@@ -38,20 +38,26 @@ class AdminWalletAddresses extends Component
             'usdt'     => 'nullable',
             'polygon'  => 'nullable',
         ]);
-
-        // Update the user's crypto accounts in the accounts table
-        $this->admin_wallets->update([
-            'bitcoin_address'  => $data['bitcoin'],
-            'ethereum_address' => $data['ethereum'],
-            'solana_address'   => $data['solana'],
-            'ripple_address'   => $data['ripple'],
-            'usdt_address'     => $data['usdt'],
-            'polygon_address'  => $data['polygon'],
-        ]);
-
-        return $this->dispatch('notify', 'User Crypto Address Updated', 'success');
+    
+        // Re-fetch the admin_wallets record to avoid null errors
+        $admin_wallets = AdminWallets::first();
+    
+        if ($admin_wallets) {
+            $admin_wallets->update([
+                'bitcoin_address'  => $data['bitcoin'],
+                'ethereum_address' => $data['ethereum'],
+                'solana_address'   => $data['solana'],
+                'ripple_address'   => $data['ripple'],
+                'usdt_address'     => $data['usdt'],
+                'polygon_address'  => $data['polygon'],
+            ]);
+    
+            return $this->dispatch('notify', 'Admin Wallet Addresses Updated', 'success');
+        }
+    
+        return $this->dispatch('notify', 'No admin wallet record found.', 'error');
     }
-
+    
 
     public function render()
     {
