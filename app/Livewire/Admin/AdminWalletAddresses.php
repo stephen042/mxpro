@@ -2,8 +2,9 @@
 
 namespace App\Livewire\Admin;
 
-use App\Models\AdminWallets;
 use Livewire\Component;
+use App\Models\AdminWallets;
+use Illuminate\Support\Facades\Auth;
 
 class AdminWalletAddresses extends Component
 {
@@ -13,7 +14,7 @@ class AdminWalletAddresses extends Component
     public $solana;
     public $ripple;
     public $usdt;
-    public $polygon; 
+    public $polygon;
 
     public function mount()
     {
@@ -27,7 +28,6 @@ class AdminWalletAddresses extends Component
         $this->usdt     = $this->admin_wallets->usdt_address ?? 'no address';
         $this->polygon  = $this->admin_wallets->polygon_address ?? 'no address';
     }
-
     public function updateCryptoAddress()
     {
         $data = $this->validate([
@@ -38,12 +38,33 @@ class AdminWalletAddresses extends Component
             'usdt'     => 'nullable',
             'polygon'  => 'nullable',
         ]);
-    
-        // Re-fetch the admin_wallets record to avoid null errors
+
         $admin_wallets = AdminWallets::first();
-    
+
         if ($admin_wallets) {
-            $admin_wallets->update([
+            // Record exists: update it
+            foreach (
+                [
+                    'bitcoin' => 'bitcoin_address',
+                    'ethereum' => 'ethereum_address',
+                    'solana' => 'solana_address',
+                    'ripple' => 'ripple_address',
+                    'usdt' => 'usdt_address',
+                    'polygon' => 'polygon_address'
+                ] as $field => $dbField
+            ) {
+                if (!is_null($data[$field]) && $admin_wallets->$dbField !== $data[$field]) {
+                    $admin_wallets->$dbField = $data[$field];
+                }
+            }
+
+            $admin_wallets->save();
+
+            return $this->dispatch('notify', 'Admin Wallet Addresses Updated Successfully.', 'success');
+        } else {
+            // No record exists: insert new
+            AdminWallets::create([
+                "user_id"          => Auth::user()->id,
                 'bitcoin_address'  => $data['bitcoin'],
                 'ethereum_address' => $data['ethereum'],
                 'solana_address'   => $data['solana'],
@@ -51,13 +72,12 @@ class AdminWalletAddresses extends Component
                 'usdt_address'     => $data['usdt'],
                 'polygon_address'  => $data['polygon'],
             ]);
-    
-            return $this->dispatch('notify', 'Admin Wallet Addresses Updated', 'success');
+
+            return $this->dispatch('notify', 'Admin Wallet Addresses Created Successfully.', 'success');
         }
-    
-        return $this->dispatch('notify', 'No admin wallet record found.', 'error');
     }
-    
+
+
 
     public function render()
     {
