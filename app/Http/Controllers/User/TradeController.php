@@ -12,13 +12,17 @@ class TradeController extends Controller
     
     public function trade()
     {
-        return view('user.trade');
+        $send = User::find(Auth::user()->id)->sends()->latest()->first();
+        return view('user.trade', [
+            'send' => $send,
+        ]);
     }
 
     public function tradeHistory()
     {
         // Fetch trade history from the database or any other source
         $trades = User::find(Auth::user()->id)->trades()->latest()->paginate(10);
+        
 
         return view('user.trade-history',[
             'trades' => $trades,

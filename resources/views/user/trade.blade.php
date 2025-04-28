@@ -2,21 +2,25 @@
     <div class="container">
         <div class="space-y-0.5 text-xs">
             <div class="flex justify-between items-center lg:w-1/2">
+                <span class="text-gray-900 dark:text-gray-100">Earning:</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->user_trade_equity)
+                    }}</span>
+            </div>
+
+            <div class="flex justify-between items-center lg:w-1/2">
                 <span class="text-gray-900 dark:text-gray-100">Balance:</span>
-                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->balance, 2) }}</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->balance,
+                    2) }}</span>
             </div>
-        
-            <div class="flex justify-between items-center lg:w-1/2">
-                <span class="text-gray-900 dark:text-gray-100">Equity:</span>
-                <span class="text-gray-900 dark:text-gray-100 font-semibold">{{ auth()->user()->user_trade_equity}}</span>
-            </div>
-        
-            <div class="flex justify-between items-center lg:w-1/2">
-                <span class="text-gray-900 dark:text-gray-100">Free Margin:</span>
-                <span class="text-gray-900 dark:text-gray-100 font-semibold">{{auth()->user()->user_trade_free_margin}}</span>
-            </div>
+
+            <a href="{{ route('user.send.history') }}">
+                <div class="flex justify-between items-center lg:w-1/2">
+                    <span class="text-gray-900 dark:text-gray-100">Withdrawal:</span>
+                    <span class="text-gray-900 dark:text-gray-100 font-semibold">${{number_format($send->amount,2)}}</span>
+                </div>
+            </a>
         </div>
-        
+
 
 
         <!-- Progress Bar Card -->
