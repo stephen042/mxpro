@@ -9,7 +9,7 @@ class AccountTopUp extends Component
     public $user;
 
     public $free_margin;
-    public $equity;
+    public $earnings;
 
     public $credit_bal_amount;
     public $credit_sub_bal_amount;
@@ -21,7 +21,7 @@ class AccountTopUp extends Component
     {
         $this->user = $user;
         $this->free_margin = $user->user_trade_free_margin;
-        $this->equity = $user->user_trade_equity;
+        $this->earnings = $user->user_trade_equity;
     }
 
     public function credit_balance(){
@@ -92,13 +92,13 @@ class AccountTopUp extends Component
     
     public function update_equity(){
         $this->validate([
-            'equity' => 'required',
+            'earnings' => 'required',
         ]);
 
-        $this->user->user_trade_equity = $this->equity;
+        $this->user->user_trade_equity = $this->earnings;
         $this->user->save();
 
-        return $this->dispatch('notify', 'User trade Margin have been updated', 'success');
+        return $this->dispatch('notify', 'User earnings have been updated', 'success');
     }
 
     public function render()

@@ -86,7 +86,7 @@
     <!-- Trade Card -->
     <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-6 w-full overflow-hidden box-border">
         <!-- Edit Free Margin -->
-        <form wire:submit.prevent="update_free_margin">
+        {{-- <form wire:submit.prevent="update_free_margin">
             <div class="mb-6">
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Edit User Trade Free Margin
@@ -103,22 +103,22 @@
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-        </form>
+        </form> --}}
         <!-- Update Equity -->
         <form wire:submit.prevent="update_equity">
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Edit User Trade Equity
+                    Top Up User Trade Earnings
                 </label>
                 <div class="flex w-full min-w-0">
-                    <input type="text" wire:model.live="equity" placeholder="update trade equity"
+                    <input type="text" wire:model.live="earnings" placeholder="Top Up User Trade Earnings"
                         class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 dark:bg-gray-700 dark:text-gray-200">
                     <button type="submit"
                         class="px-4 py-2 border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white text-xs font-semibold rounded-r-md focus:ring focus:ring-yellow-300">
                         Update
                     </button>
                 </div>
-                @error('equity')
+                @error('earnings')
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
