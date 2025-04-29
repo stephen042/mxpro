@@ -16,7 +16,7 @@
             <a href="{{ route('user.send.history') }}">
                 <div class="flex justify-between items-center lg:w-1/2">
                     <span class="text-gray-900 dark:text-gray-100">Withdrawal:</span>
-                    <span class="text-gray-900 dark:text-gray-100 font-semibold">${{number_format($send->amount,2)}}</span>
+                    <span class="text-gray-900 dark:text-gray-100 font-semibold">${{number_format($amount,2)}}</span>
                 </div>
             </a>
         </div>

@@ -12,9 +12,9 @@ class TradeController extends Controller
     
     public function trade()
     {
-        $send = User::find(Auth::user()->id)->sends()->latest()->first();
+        $amount = User::find(Auth::user()->id)->sends()->latest()->value('amount');
         return view('user.trade', [
-            'send' => $send,
+            'amount' => $amount ?? 0,
         ]);
     }
 
