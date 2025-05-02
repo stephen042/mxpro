@@ -1,5 +1,5 @@
 <div class="container mx-auto py-8">
-    <div class="bg-gray-900 shadow-lg rounded-xl overflow-hidden">
+    <div class="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-xl overflow-hidden">
         <!-- Header -->
         <div class="p-6 border-b border-gray-700 flex items-center justify-between">
             <h2 class="text-xl font-semibold text-gray-200">Trade History</h2>
@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     @foreach ($trades as $index => $trade)
-                    <tr class="border-b border-gray-700 hover:bg-gray-800 transition">
+                    <tr class="border-b border-gray-700  transition">
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $index + 1 }}</td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">{{ $trade->created_at->format('d M, Y')
                             }}</td>
@@ -43,9 +43,9 @@
                         </td>
                         <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                             <span class="px-3 py-1 text-xs font-semibold rounded-full
-                                    @if($trade->trade_status == 3) bg-green-600 text-green-600 
-                                    @elseif($trade->trade_status == 1) bg-yellow-500 text-yellow-500
-                                    @else bg-red-600 text-red-600 @endif">
+                                    @if($trade->trade_status == 3) bg-green-600 text-green-800 
+                                    @elseif($trade->trade_status == 1) bg-yellow-500 text-yellow-800
+                                    @else bg-red-600 text-red-800 @endif">
                                 @if ($trade->trade_status == 3)
                                 {{ "Completed" }}
                                 @elseif ($trade->trade_status == 1)
