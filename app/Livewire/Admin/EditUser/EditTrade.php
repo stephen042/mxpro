@@ -44,7 +44,7 @@ class EditTrade extends Component
         }
 
         if (!is_null($loss)) {
-            $this->user->balance -= $loss;
+            $this->user->sub_balance -= $loss;
             $trade->trade_loss = $loss;
         }
 

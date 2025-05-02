@@ -5,7 +5,7 @@
         <form wire:submit.prevent="credit_balance">
             <div class="mb-6">
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Credit User Balance Manually
+                    Credit User Balance Manually (Earnings)
                 </label>
                 <div class="flex w-full min-w-0">
                     <input type="number" wire:model.live="credit_bal_amount" placeholder="Credit User Balance"
@@ -24,7 +24,7 @@
         <form wire:submit.prevent="debit_balance">
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Debit User Balance Manually
+                    Debit User Balance Manually (Earnings)
                 </label>
                 <div class="flex w-full min-w-0">
                     <input type="number" wire:model.live="debit_bal_amount" placeholder="Debit User Balance"
@@ -47,7 +47,7 @@
         <form wire:submit.prevent="credit_sub_balance">
             <div class="mb-6">
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Credit User Sub Balance Manually
+                    Credit User Sub Balance Manually (Deposited Balance) 
                 </label>
                 <div class="flex w-full min-w-0">
                     <input type="number" wire:model.live="credit_sub_bal_amount" placeholder="Credit User Sub Funds"
@@ -66,7 +66,7 @@
         <form wire:submit.prevent="debit_sub_balance">
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Debit User Sub Balance Manually
+                    Debit User Sub Balance Manually (Deposited Balance) 
                 </label>
                 <div class="flex w-full min-w-0">
                     <input type="number" wire:model.live="debit_sub_bal_amount" placeholder="Debit User Sub Funds"
@@ -84,9 +84,9 @@
     </div>
 
     <!-- Trade Card -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-6 w-full overflow-hidden box-border">
+    {{-- <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-6 w-full overflow-hidden box-border">
         <!-- Edit Free Margin -->
-        {{-- <form wire:submit.prevent="update_free_margin">
+        <form wire:submit.prevent="update_free_margin">
             <div class="mb-6">
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Edit User Trade Free Margin
@@ -103,7 +103,7 @@
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-        </form> --}}
+        </form>
         <!-- Update Equity -->
         <form wire:submit.prevent="update_equity">
             <div>
@@ -123,7 +123,7 @@
                 @enderror
             </div>
         </form>
-    </div>
+    </div> --}}
 
     <!-- Account Status & Email Card -->
     <div class="bg-white dark:bg-gray-800 shadow rounded-xl p-6 w-full overflow-hidden box-border">

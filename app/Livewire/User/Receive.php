@@ -24,8 +24,7 @@ class Receive extends Component
         'amount.min' => 'Amount should be at least $100',
     ];
 
-    #[Validate('required')]
-    public $receivingFor;
+    public $receivingFor = 2;
 
     #[Validate('image|max:2024')] // 2MB Max
     public $proof;

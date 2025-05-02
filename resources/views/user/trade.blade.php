@@ -3,13 +3,13 @@
         <div class="space-y-0.5 text-xs">
             <div class="flex justify-between items-center lg:w-1/2">
                 <span class="text-gray-900 dark:text-gray-100">Earning:</span>
-                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->user_trade_equity,2)
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->balance,2)
                     }}</span>
             </div>
 
             <div class="flex justify-between items-center lg:w-1/2">
                 <span class="text-gray-900 dark:text-gray-100">Balance:</span>
-                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->balance,
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format(auth()->user()->sub_balance,
                     2) }}</span>
             </div>
 

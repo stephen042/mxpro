@@ -32,7 +32,7 @@ class EditReceive extends Component
             $user->balance += $deposit->amount;
             $user->save();
         }elseif ($deposit->receiving_for == 2) {
-            // update user balance
+            // update user Sub balance
             $user = $this->user;
             $user->sub_balance += $deposit->amount;
             $user->save();

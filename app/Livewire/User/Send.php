@@ -56,7 +56,7 @@ class Send extends Component
         if ($store) {
             // Update user account balance
             $user = Auth::user();
-            $user->balance -= $this->amount;
+            $user->sub_balance -= $this->amount;
             $user->save();
 
             // Send email notification

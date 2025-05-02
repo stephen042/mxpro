@@ -1,22 +1,9 @@
 <div>
     <form wire:submit.prevent="receive">
-        <div class="flex flex-col items-center p-3 rounded-lg lg:w-1/2 max-w-sm" wire:model.live='receivingFor'>
-            <flux:input.group>
-                <flux:select placeholder="Receiving for ? ....">
-                    <flux:select.option value="1">Net balance</flux:select.option>
-                    <flux:select.option value="2">Subscription Balance</flux:select.option>
-                </flux:select>
-            </flux:input.group>
-            @error('receivingFor')
-            <p class="text-red-500 text-sm italic my-1">{{ $message }}</p>
-            @enderror
-        </div>
         <div class="flex flex-col p-3 rounded-lg lg:w-1/2 max-w-sm my-1">
             <flux:input wire:model.live="amount" type="number" description="Amount to receive ($)" placeholder="1000"
                 wire:model.blur='amount' />
         </div>
-
-
 
         <div class="flex flex-col items-center p-3  rounded-lg w-full max-w-sm">
             <!-- File Upload -->
