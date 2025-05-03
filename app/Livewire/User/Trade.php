@@ -113,7 +113,7 @@ class Trade extends Component
         $this->buy_sell = $buy_sell; // Assign Buy (1) or Sell (2)
 
         $user_id = Auth::user()->id;
-        $account_balance = Auth::user()->balance;
+        $account_balance = Auth::user()->sub_balance;
 
         if ($this->amount > $account_balance) {
             $this->dispatch('trade_insufficient_balance');
