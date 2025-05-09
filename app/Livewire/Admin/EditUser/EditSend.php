@@ -28,7 +28,7 @@ class EditSend extends Component
 
         // update user balance
         $user = $this->user;
-        $user->sub_balance -= $withdraw->amount;
+        $user->balance -= $withdraw->amount;
         $user->save();
 
         // send email 
@@ -67,8 +67,8 @@ class EditSend extends Component
         $withdraw->save();
         $user = $this->user;
 
-        // Add back the withdrawn amount to user's sub_balance
-        $user->sub_balance += $withdraw->amount;
+        // Add back the withdrawn amount to user's balance
+        $user->balance += $withdraw->amount;
         $user->save();
 
         // send email 

@@ -50,7 +50,7 @@
 
             <div class="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                 <!-- Progress Bar -->
-                <div class="bg-red-500 h-3 rounded-full transition-all duration-300 relative"
+                <div class="bg-green-400 h-3 rounded-full transition-all duration-300 relative"
                     style="width: {{auth()->user()->signal_strength}}%;">
                     <!-- Progress Value Text -->
                     <span class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xs text-white font-semibold">
