@@ -7,42 +7,42 @@
             <div>
                 <label for="bitcoin" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Bitcoin
                     Account</label>
-                <input type="text" id="bitcoin" wire:model="bitcoin" placeholder="Enter Bitcoin Account"
+                <input type="number" id="bitcoin" wire:model="bitcoin" placeholder="Enter Bitcoin Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
             <!-- Ethereum Account -->
             <div>
                 <label for="ethereum" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Ethereum
                     Account</label>
-                <input type="text" id="ethereum" wire:model="ethereum" placeholder="Enter Ethereum Account"
+                <input type="number" id="ethereum" wire:model="ethereum" placeholder="Enter Ethereum Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
             <!-- Solana Account -->
             <div>
                 <label for="solana" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Solana
                     Account</label>
-                <input type="text" id="solana" wire:model="solana" placeholder="Enter Solana Account"
+                <input type="number" id="solana" wire:model="solana" placeholder="Enter Solana Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
             <!-- Ripple Account -->
             <div>
                 <label for="ripple" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Ripple
                     Account</label>
-                <input type="text" id="ripple" wire:model="ripple" placeholder="Enter Ripple Account"
+                <input type="number" id="ripple" wire:model="ripple" placeholder="Enter Ripple Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
             <!-- USDT Account -->
             <div>
                 <label for="usdt" class="block text-sm font-medium text-gray-700 dark:text-gray-300">USDT
                     Account</label>
-                <input type="text" id="usdt" wire:model="usdt" placeholder="Enter USDT Account"
+                <input type="number" id="usdt" wire:model="usdt" placeholder="Enter USDT Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
             <!-- Polygon Account -->
             <div>
                 <label for="polygon" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Polygon
                     Account</label>
-                <input type="text" id="polygon" wire:model="polygon" placeholder="Enter Polygon Account"
+                <input type="number" id="polygon" wire:model="polygon" placeholder="Enter Polygon Account"
                     class="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-white">
             </div>
         </div>
