@@ -7,11 +7,11 @@
             <div class="p-4 flex flex-col items-center justify-center lg:w-full">
                 <!-- Account balance value -->
                 <div class="text-3xl font-bold text-gray-900 dark:text-gray-100">
-                    ${{ number_format(auth()->user()->balance, 2) }}
+                    ${{ number_format((float) (auth()->user()->balance ?? 0), 2) }}
                 </div>
                 <!-- Gained money indicator -->
                 <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    <span>Sub Bal - ${{ number_format(auth()->user()->sub_balance, 2) }}</span>
+                    <span>Sub Bal - ${{ number_format((float) (auth()->user()->sub_balance ?? 0), 2) }}</span>
                 </div>
             </div>
 
@@ -47,7 +47,6 @@
 
         </div>
 
-
         <!-- Crypto List Section -->
         <div class="mt-12 mb-16">
             <!-- Grid: full-width on mobile, 3 columns on large screens -->
@@ -67,7 +66,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->solana_balance,2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->solana_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span>+0.00</span> --}}
                         </div>
@@ -89,7 +89,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ethereum_balance,2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->ethereum_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span>+0.00</span> --}}
                         </div>
@@ -106,12 +107,13 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">USDT Tether</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span><b>USDT</b> </span>
+                                <span><b>USDT</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->usdt_balance,2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->usdt_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span></span> --}}
                         </div>
@@ -128,12 +130,13 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Bitcoin</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span><b>BTC</b> </span>
+                                <span><b>BTC</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->bitcoin_balance, 2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->bitcoin_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span>+0.00</span> --}}
                         </div>
@@ -150,12 +153,13 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Polygon</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span><b>POL</b> </span>
+                                <span><b>POL</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->polygon_balance, 2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->polygon_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span>+0.00</span> --}}
                         </div>
@@ -172,12 +176,13 @@
                         <div class="flex flex-col">
                             <span class="text-gray-900 dark:text-gray-100 font-medium">Ripple</span>
                             <div class="text-sm text-gray-600 dark:text-gray-400">
-                                <span><b>XRP</b> </span>
+                                <span><b>XRP</b></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format($crypto_accounts->ripple_balance,2) }} </span>
+                        <span class="text-gray-900 dark:text-gray-100 font-semibold">${{ number_format((float)
+                            ($crypto_accounts->ripple_balance ?? 0), 2) }}</span>
                         <div class="text-sm text-gray-600 dark:text-gray-400">
                             {{-- <span>+0.00</span> --}}
                         </div>
@@ -186,5 +191,4 @@
             </div>
         </div>
     </div>
-
 </x-layouts.app>

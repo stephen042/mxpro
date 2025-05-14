@@ -7,6 +7,7 @@
             <flux:select wire:model.blur="currency" description="Select Crypto Currency">
                 <option>Select</option>
                 <flux:select.option value="bitcoin">Bitcoin</flux:select.option>
+                <flux:select.option value="solana">Solana</flux:select.option>
                 <flux:select.option value="ethereum">Ethereum</flux:select.option>
                 <flux:select.option value="ripple">Ripple</flux:select.option>
                 <flux:select.option value="usdt">Tether (USDT)</flux:select.option>
